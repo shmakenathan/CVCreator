@@ -8,12 +8,26 @@
 
 /* Begin PBXBuildFile section */
 		D8358EC12721ABBB0048D178 /* CVCreatorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8358EC02721ABBB0048D178 /* CVCreatorApp.swift */; };
-		D8358EC32721ABBB0048D178 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8358EC22721ABBB0048D178 /* ContentView.swift */; };
 		D8358EC52721ABBE0048D178 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D8358EC42721ABBE0048D178 /* Assets.xcassets */; };
 		D8358EC82721ABBE0048D178 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D8358EC72721ABBE0048D178 /* Preview Assets.xcassets */; };
 		D8358ED22721ABBF0048D178 /* CVCreatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8358ED12721ABBF0048D178 /* CVCreatorTests.swift */; };
 		D8358EDC2721ABBF0048D178 /* CVCreatorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8358EDB2721ABBF0048D178 /* CVCreatorUITests.swift */; };
 		D8358EDE2721ABBF0048D178 /* CVCreatorUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8358EDD2721ABBF0048D178 /* CVCreatorUITestsLaunchTests.swift */; };
+		D8358EEB2721AC8C0048D178 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8358EEA2721AC8C0048D178 /* RootView.swift */; };
+		D8358EED2721AC9E0048D178 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8358EEC2721AC9E0048D178 /* OnboardingView.swift */; };
+		D8358EEF2721ACA80048D178 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8358EEE2721ACA80048D178 /* LoginView.swift */; };
+		D8358EF12721ACB60048D178 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8358EF02721ACB60048D178 /* MainView.swift */; };
+		D8358EFB2721ACF90048D178 /* CVCreatorCore.docc in Sources */ = {isa = PBXBuildFile; fileRef = D8358EFA2721ACF90048D178 /* CVCreatorCore.docc */; };
+		D8358F012721ACFA0048D178 /* CVCreatorCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8358EF72721ACF90048D178 /* CVCreatorCore.framework */; };
+		D8358F082721ACFA0048D178 /* CVCreatorCoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8358F072721ACFA0048D178 /* CVCreatorCoreTests.swift */; };
+		D8358F092721ACFA0048D178 /* CVCreatorCore.h in Headers */ = {isa = PBXBuildFile; fileRef = D8358EF92721ACF90048D178 /* CVCreatorCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D8358F0C2721ACFA0048D178 /* CVCreatorCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8358EF72721ACF90048D178 /* CVCreatorCore.framework */; };
+		D8358F0D2721ACFA0048D178 /* CVCreatorCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D8358EF72721ACF90048D178 /* CVCreatorCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D8358F162721AD1A0048D178 /* RootViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8358F152721AD1A0048D178 /* RootViewModel.swift */; };
+		D8358F182721AD290048D178 /* OnboardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8358F172721AD290048D178 /* OnboardingViewModel.swift */; };
+		D8358F1A2721AD390048D178 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8358F192721AD390048D178 /* LoginViewModel.swift */; };
+		D8358F1C2721AD560048D178 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8358F1B2721AD560048D178 /* MainViewModel.swift */; };
+		D8358F1E2721B4DF0048D178 /* OnboardingSlide.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8358F1D2721B4DF0048D178 /* OnboardingSlide.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,12 +45,46 @@
 			remoteGlobalIDString = D8358EBC2721ABBB0048D178;
 			remoteInfo = CVCreator;
 		};
+		D8358F022721ACFA0048D178 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D8358EB52721ABBB0048D178 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D8358EF62721ACF90048D178;
+			remoteInfo = CVCreatorCore;
+		};
+		D8358F042721ACFA0048D178 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D8358EB52721ABBB0048D178 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D8358EBC2721ABBB0048D178;
+			remoteInfo = CVCreator;
+		};
+		D8358F0A2721ACFA0048D178 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D8358EB52721ABBB0048D178 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D8358EF62721ACF90048D178;
+			remoteInfo = CVCreatorCore;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		D8358F112721ACFA0048D178 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				D8358F0D2721ACFA0048D178 /* CVCreatorCore.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		D8358EBD2721ABBB0048D178 /* CVCreator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CVCreator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8358EC02721ABBB0048D178 /* CVCreatorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CVCreatorApp.swift; sourceTree = "<group>"; };
-		D8358EC22721ABBB0048D178 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		D8358EC42721ABBE0048D178 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D8358EC72721ABBE0048D178 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		D8358ECD2721ABBF0048D178 /* CVCreatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CVCreatorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -44,6 +92,20 @@
 		D8358ED72721ABBF0048D178 /* CVCreatorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CVCreatorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8358EDB2721ABBF0048D178 /* CVCreatorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CVCreatorUITests.swift; sourceTree = "<group>"; };
 		D8358EDD2721ABBF0048D178 /* CVCreatorUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CVCreatorUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		D8358EEA2721AC8C0048D178 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
+		D8358EEC2721AC9E0048D178 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		D8358EEE2721ACA80048D178 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		D8358EF02721ACB60048D178 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		D8358EF72721ACF90048D178 /* CVCreatorCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CVCreatorCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D8358EF92721ACF90048D178 /* CVCreatorCore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CVCreatorCore.h; sourceTree = "<group>"; };
+		D8358EFA2721ACF90048D178 /* CVCreatorCore.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = CVCreatorCore.docc; sourceTree = "<group>"; };
+		D8358F002721ACFA0048D178 /* CVCreatorCoreTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CVCreatorCoreTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D8358F072721ACFA0048D178 /* CVCreatorCoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CVCreatorCoreTests.swift; sourceTree = "<group>"; };
+		D8358F152721AD1A0048D178 /* RootViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewModel.swift; sourceTree = "<group>"; };
+		D8358F172721AD290048D178 /* OnboardingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewModel.swift; sourceTree = "<group>"; };
+		D8358F192721AD390048D178 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		D8358F1B2721AD560048D178 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		D8358F1D2721B4DF0048D178 /* OnboardingSlide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingSlide.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +113,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D8358F0C2721ACFA0048D178 /* CVCreatorCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,6 +131,21 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D8358EF42721ACF90048D178 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D8358EFD2721ACFA0048D178 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D8358F012721ACFA0048D178 /* CVCreatorCore.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -77,6 +155,8 @@
 				D8358EBF2721ABBB0048D178 /* CVCreator */,
 				D8358ED02721ABBF0048D178 /* CVCreatorTests */,
 				D8358EDA2721ABBF0048D178 /* CVCreatorUITests */,
+				D8358EF82721ACF90048D178 /* CVCreatorCore */,
+				D8358F062721ACFA0048D178 /* CVCreatorCoreTests */,
 				D8358EBE2721ABBB0048D178 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -87,6 +167,8 @@
 				D8358EBD2721ABBB0048D178 /* CVCreator.app */,
 				D8358ECD2721ABBF0048D178 /* CVCreatorTests.xctest */,
 				D8358ED72721ABBF0048D178 /* CVCreatorUITests.xctest */,
+				D8358EF72721ACF90048D178 /* CVCreatorCore.framework */,
+				D8358F002721ACFA0048D178 /* CVCreatorCoreTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -95,9 +177,12 @@
 			isa = PBXGroup;
 			children = (
 				D8358EC02721ABBB0048D178 /* CVCreatorApp.swift */,
-				D8358EC22721ABBB0048D178 /* ContentView.swift */,
 				D8358EC42721ABBE0048D178 /* Assets.xcassets */,
 				D8358EC62721ABBE0048D178 /* Preview Content */,
+				D8358EEA2721AC8C0048D178 /* RootView.swift */,
+				D8358EEC2721AC9E0048D178 /* OnboardingView.swift */,
+				D8358EEE2721ACA80048D178 /* LoginView.swift */,
+				D8358EF02721ACB60048D178 /* MainView.swift */,
 			);
 			path = CVCreator;
 			sourceTree = "<group>";
@@ -127,7 +212,40 @@
 			path = CVCreatorUITests;
 			sourceTree = "<group>";
 		};
+		D8358EF82721ACF90048D178 /* CVCreatorCore */ = {
+			isa = PBXGroup;
+			children = (
+				D8358EF92721ACF90048D178 /* CVCreatorCore.h */,
+				D8358EFA2721ACF90048D178 /* CVCreatorCore.docc */,
+				D8358F152721AD1A0048D178 /* RootViewModel.swift */,
+				D8358F172721AD290048D178 /* OnboardingViewModel.swift */,
+				D8358F192721AD390048D178 /* LoginViewModel.swift */,
+				D8358F1B2721AD560048D178 /* MainViewModel.swift */,
+				D8358F1D2721B4DF0048D178 /* OnboardingSlide.swift */,
+			);
+			path = CVCreatorCore;
+			sourceTree = "<group>";
+		};
+		D8358F062721ACFA0048D178 /* CVCreatorCoreTests */ = {
+			isa = PBXGroup;
+			children = (
+				D8358F072721ACFA0048D178 /* CVCreatorCoreTests.swift */,
+			);
+			path = CVCreatorCoreTests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		D8358EF22721ACF90048D178 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D8358F092721ACFA0048D178 /* CVCreatorCore.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		D8358EBC2721ABBB0048D178 /* CVCreator */ = {
@@ -137,10 +255,12 @@
 				D8358EB92721ABBB0048D178 /* Sources */,
 				D8358EBA2721ABBB0048D178 /* Frameworks */,
 				D8358EBB2721ABBB0048D178 /* Resources */,
+				D8358F112721ACFA0048D178 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				D8358F0B2721ACFA0048D178 /* PBXTargetDependency */,
 			);
 			name = CVCreator;
 			productName = CVCreator;
@@ -183,6 +303,43 @@
 			productReference = D8358ED72721ABBF0048D178 /* CVCreatorUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		D8358EF62721ACF90048D178 /* CVCreatorCore */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D8358F0E2721ACFA0048D178 /* Build configuration list for PBXNativeTarget "CVCreatorCore" */;
+			buildPhases = (
+				D8358EF22721ACF90048D178 /* Headers */,
+				D8358EF32721ACF90048D178 /* Sources */,
+				D8358EF42721ACF90048D178 /* Frameworks */,
+				D8358EF52721ACF90048D178 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CVCreatorCore;
+			productName = CVCreatorCore;
+			productReference = D8358EF72721ACF90048D178 /* CVCreatorCore.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		D8358EFF2721ACFA0048D178 /* CVCreatorCoreTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D8358F122721ACFA0048D178 /* Build configuration list for PBXNativeTarget "CVCreatorCoreTests" */;
+			buildPhases = (
+				D8358EFC2721ACFA0048D178 /* Sources */,
+				D8358EFD2721ACFA0048D178 /* Frameworks */,
+				D8358EFE2721ACFA0048D178 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D8358F032721ACFA0048D178 /* PBXTargetDependency */,
+				D8358F052721ACFA0048D178 /* PBXTargetDependency */,
+			);
+			name = CVCreatorCoreTests;
+			productName = CVCreatorCoreTests;
+			productReference = D8358F002721ACFA0048D178 /* CVCreatorCoreTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -204,6 +361,13 @@
 						CreatedOnToolsVersion = 13.0;
 						TestTargetID = D8358EBC2721ABBB0048D178;
 					};
+					D8358EF62721ACF90048D178 = {
+						CreatedOnToolsVersion = 13.0;
+					};
+					D8358EFF2721ACFA0048D178 = {
+						CreatedOnToolsVersion = 13.0;
+						TestTargetID = D8358EBC2721ABBB0048D178;
+					};
 				};
 			};
 			buildConfigurationList = D8358EB82721ABBB0048D178 /* Build configuration list for PBXProject "CVCreator" */;
@@ -222,6 +386,8 @@
 				D8358EBC2721ABBB0048D178 /* CVCreator */,
 				D8358ECC2721ABBF0048D178 /* CVCreatorTests */,
 				D8358ED62721ABBF0048D178 /* CVCreatorUITests */,
+				D8358EF62721ACF90048D178 /* CVCreatorCore */,
+				D8358EFF2721ACFA0048D178 /* CVCreatorCoreTests */,
 			);
 		};
 /* End PBXProject section */
@@ -250,6 +416,20 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D8358EF52721ACF90048D178 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D8358EFE2721ACFA0048D178 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -257,8 +437,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D8358EC32721ABBB0048D178 /* ContentView.swift in Sources */,
+				D8358EF12721ACB60048D178 /* MainView.swift in Sources */,
+				D8358EED2721AC9E0048D178 /* OnboardingView.swift in Sources */,
 				D8358EC12721ABBB0048D178 /* CVCreatorApp.swift in Sources */,
+				D8358EEF2721ACA80048D178 /* LoginView.swift in Sources */,
+				D8358EEB2721AC8C0048D178 /* RootView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -279,6 +462,27 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D8358EF32721ACF90048D178 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D8358F1C2721AD560048D178 /* MainViewModel.swift in Sources */,
+				D8358F1A2721AD390048D178 /* LoginViewModel.swift in Sources */,
+				D8358F182721AD290048D178 /* OnboardingViewModel.swift in Sources */,
+				D8358F162721AD1A0048D178 /* RootViewModel.swift in Sources */,
+				D8358F1E2721B4DF0048D178 /* OnboardingSlide.swift in Sources */,
+				D8358EFB2721ACF90048D178 /* CVCreatorCore.docc in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D8358EFC2721ACFA0048D178 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D8358F082721ACFA0048D178 /* CVCreatorCoreTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -291,6 +495,21 @@
 			isa = PBXTargetDependency;
 			target = D8358EBC2721ABBB0048D178 /* CVCreator */;
 			targetProxy = D8358ED82721ABBF0048D178 /* PBXContainerItemProxy */;
+		};
+		D8358F032721ACFA0048D178 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D8358EF62721ACF90048D178 /* CVCreatorCore */;
+			targetProxy = D8358F022721ACFA0048D178 /* PBXContainerItemProxy */;
+		};
+		D8358F052721ACFA0048D178 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D8358EBC2721ABBB0048D178 /* CVCreator */;
+			targetProxy = D8358F042721ACFA0048D178 /* PBXContainerItemProxy */;
+		};
+		D8358F0B2721ACFA0048D178 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D8358EF62721ACF90048D178 /* CVCreatorCore */;
+			targetProxy = D8358F0A2721ACFA0048D178 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -414,6 +633,7 @@
 		D8358EE22721ABBF0048D178 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -427,7 +647,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -444,6 +664,7 @@
 		D8358EE32721ABBF0048D178 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -457,7 +678,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -480,7 +701,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = LV6V24R5F5;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -505,7 +726,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = LV6V24R5F5;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -567,6 +788,112 @@
 			};
 			name = Release;
 		};
+		D8358F0F2721ACFA0048D178 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = LV6V24R5F5;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nathanchicha.CVCreatorCore;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		D8358F102721ACFA0048D178 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = LV6V24R5F5;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nathanchicha.CVCreatorCore;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		D8358F132721ACFA0048D178 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = LV6V24R5F5;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nathanchicha.CVCreatorCoreTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CVCreator.app/CVCreator";
+			};
+			name = Debug;
+		};
+		D8358F142721ACFA0048D178 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = LV6V24R5F5;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nathanchicha.CVCreatorCoreTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CVCreator.app/CVCreator";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -602,6 +929,24 @@
 			buildConfigurations = (
 				D8358EE82721ABBF0048D178 /* Debug */,
 				D8358EE92721ABBF0048D178 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D8358F0E2721ACFA0048D178 /* Build configuration list for PBXNativeTarget "CVCreatorCore" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D8358F0F2721ACFA0048D178 /* Debug */,
+				D8358F102721ACFA0048D178 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D8358F122721ACFA0048D178 /* Build configuration list for PBXNativeTarget "CVCreatorCoreTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D8358F132721ACFA0048D178 /* Debug */,
+				D8358F142721ACFA0048D178 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
