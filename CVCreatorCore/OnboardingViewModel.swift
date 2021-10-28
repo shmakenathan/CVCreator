@@ -25,16 +25,22 @@ public class OnboardingViewModel: ObservableObject {
     
     private let onboardingSlides: [OnboardingSlide] = [
         .init(
-            title: "Test titl0 1",
-            imageName: "circle",
-            bodyText: "here is that",
-            buttonTitle: "next"
+            title: "Creer votre CV en quelque seconde",
+            imageName: "cv1",
+            bodyText: "Plus besoin de galerer pour faire votre CV",
+            buttonTitle: "Next"
         ),
         .init(
-            title: "Test titl02",
-            imageName: "circle",
-            bodyText: "here is that adsidashihad",
-            buttonTitle: "next"
+            title: "Plusieurs modele",
+            imageName: "modele",
+            bodyText: "Choisissez parmi un large choix de modele",
+            buttonTitle: "Next"
+        ),
+        .init(
+            title: "Faites la difference",
+            imageName: "difference",
+            bodyText: "Mettez toute vos chance de votre cote",
+            buttonTitle: "S'inscrire"
         )
     
     ]
