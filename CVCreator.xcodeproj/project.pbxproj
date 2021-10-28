@@ -27,7 +27,8 @@
 		D8358F182721AD290048D178 /* OnboardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8358F172721AD290048D178 /* OnboardingViewModel.swift */; };
 		D8358F1A2721AD390048D178 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8358F192721AD390048D178 /* LoginViewModel.swift */; };
 		D8358F1C2721AD560048D178 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8358F1B2721AD560048D178 /* MainViewModel.swift */; };
-		D8358F1E2721B4DF0048D178 /* OnboardingSlide.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8358F1D2721B4DF0048D178 /* OnboardingSlide.swift */; };
+		D8358F1E2721B4DF0048D178 /* OnboardingSlideViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8358F1D2721B4DF0048D178 /* OnboardingSlideViewModel.swift */; };
+		D8D0D7A3272A991A00B338CF /* OnboardingSlideView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8D0D7A2272A991900B338CF /* OnboardingSlideView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -105,7 +106,8 @@
 		D8358F172721AD290048D178 /* OnboardingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewModel.swift; sourceTree = "<group>"; };
 		D8358F192721AD390048D178 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		D8358F1B2721AD560048D178 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
-		D8358F1D2721B4DF0048D178 /* OnboardingSlide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingSlide.swift; sourceTree = "<group>"; };
+		D8358F1D2721B4DF0048D178 /* OnboardingSlideViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingSlideViewModel.swift; sourceTree = "<group>"; };
+		D8D0D7A2272A991900B338CF /* OnboardingSlideView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingSlideView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -183,6 +185,7 @@
 				D8358EEC2721AC9E0048D178 /* OnboardingView.swift */,
 				D8358EEE2721ACA80048D178 /* LoginView.swift */,
 				D8358EF02721ACB60048D178 /* MainView.swift */,
+				D8D0D7A2272A991900B338CF /* OnboardingSlideView.swift */,
 			);
 			path = CVCreator;
 			sourceTree = "<group>";
@@ -221,7 +224,7 @@
 				D8358F172721AD290048D178 /* OnboardingViewModel.swift */,
 				D8358F192721AD390048D178 /* LoginViewModel.swift */,
 				D8358F1B2721AD560048D178 /* MainViewModel.swift */,
-				D8358F1D2721B4DF0048D178 /* OnboardingSlide.swift */,
+				D8358F1D2721B4DF0048D178 /* OnboardingSlideViewModel.swift */,
 			);
 			path = CVCreatorCore;
 			sourceTree = "<group>";
@@ -438,6 +441,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D8358EF12721ACB60048D178 /* MainView.swift in Sources */,
+				D8D0D7A3272A991A00B338CF /* OnboardingSlideView.swift in Sources */,
 				D8358EED2721AC9E0048D178 /* OnboardingView.swift in Sources */,
 				D8358EC12721ABBB0048D178 /* CVCreatorApp.swift in Sources */,
 				D8358EEF2721ACA80048D178 /* LoginView.swift in Sources */,
@@ -470,7 +474,7 @@
 				D8358F1A2721AD390048D178 /* LoginViewModel.swift in Sources */,
 				D8358F182721AD290048D178 /* OnboardingViewModel.swift in Sources */,
 				D8358F162721AD1A0048D178 /* RootViewModel.swift in Sources */,
-				D8358F1E2721B4DF0048D178 /* OnboardingSlide.swift in Sources */,
+				D8358F1E2721B4DF0048D178 /* OnboardingSlideViewModel.swift in Sources */,
 				D8358EFB2721ACF90048D178 /* CVCreatorCore.docc in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

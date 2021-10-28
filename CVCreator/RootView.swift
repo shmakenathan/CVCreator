@@ -15,13 +15,15 @@ struct RootView: View {
         Group {
             switch viewModel.presentedRootViewType {
             case .onboarding:
-                OnboardingView()
+                OnboardingView(
+                    viewModel: OnboardingViewModel(rootViewModel: viewModel)
+                )
             case .login:
                 LoginView()
             case .main:
                 MainView()
             }
-        }.environmentObject(viewModel)
+        }
     }
 }
 
