@@ -16,7 +16,7 @@ public class LoginViewModel: ObservableObject {
     
     private let rootViewModel: RootViewModel
     
-    private func goToMain() {
+    public func goToMain() {
         rootViewModel.presentedRootViewType = .main
     }
 }
