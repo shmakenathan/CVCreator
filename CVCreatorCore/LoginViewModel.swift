@@ -10,8 +10,13 @@ import Foundation
 
 public class LoginViewModel: ObservableObject {
     
-    public init() {
-        
+    public init(rootViewModel: RootViewModel) {
+        self.rootViewModel = rootViewModel
     }
     
+    private let rootViewModel: RootViewModel
+    
+    private func goToMain() {
+        rootViewModel.presentedRootViewType = .main
+    }
 }

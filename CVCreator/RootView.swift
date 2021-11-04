@@ -19,7 +19,8 @@ struct RootView: View {
                     viewModel: OnboardingViewModel(rootViewModel: viewModel)
                 )
             case .login:
-                LoginView()
+                LoginView(
+                        viewModel: LoginViewModel(rootViewModel: viewModel))
             case .main:
                 MainView()
             }
