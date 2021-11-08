@@ -10,56 +10,102 @@ import CVCreatorCore
 
 struct LoginView: View {
     
-    @StateObject var viewModel : LoginViewModel
-    @State var username : String = ""
-    @State var password : String = ""
+    @StateObject var viewModel: LoginViewModel
+
+    
     var body: some View {
-        VStack{
-            Spacer()
-            Text("Bienvenue !").font(.largeTitle).fontWeight(.bold)
-            
-            Text("Login with").padding()
-                .multilineTextAlignment(.leading)
-            HStack(spacing: 30.0){
-                Button {
+        NavigationView {
+            VStack {
+                Text(viewModel.navigationTitle)
+                    .font(.largeTitle)
+                    .fontWeight(.bold)
+                
+                Spacer()
+                
+                VStack {
+                    Text("Login with")
+                        .frame(maxWidth: .infinity, alignment: .leading)
                     
-                } label: {
-                    Image("facebook").resizable().aspectRatio( contentMode: .fit
-                    )
-                }
-                Button {
+                    loginWithSocialNetworksSectionView
                     
-                } label: {
-                    Image("google").resizable().aspectRatio( contentMode: .fit)
-                }
-                Button {
+                    Text("or")
+                        .frame(maxWidth: .infinity, alignment: .leading)
                     
-                } label: {
-                    Image("twitter").resizable().aspectRatio( contentMode: .fit)
+                    userInformationTextFieldsSectionView
                 }
                 
-            }.padding(.horizontal, 45.0)
-            Text("or")
-            TextField("username", text: $username)
-                .textFieldStyle(RoundedBorderTextFieldStyle())
-            Divider()
-            SecureField("Password", text: $password)
-                .textFieldStyle(RoundedBorderTextFieldStyle())
-            Divider()
+                Spacer()
+                
+                mainButtonsSectionView
+                
+            }
+            .padding(.horizontal, 20)
+            .padding(.vertical)
+            .navigationBarHidden(true)
+        }
         
+        
+    }
+    
+    
+    
+    private var loginWithSocialNetworksSectionView: some View {
+        HStack(spacing: 30.0) {
             Button {
-                if username == password {
-                    viewModel.goToMain()
-                }
                 
             } label: {
-                Text("Login").frame( maxWidth: .infinity).padding().foregroundColor(.white).background(.black).padding(.horizontal, 30.0
-                )
+                Image("facebook")
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
             }
-           // Text("Sign up")
-         
-        }.padding()
-        
+            Button {
+                
+            } label: {
+                Image("google")
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+            }
+            Button {
+                
+            } label: {
+                Image("twitter")
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+            }
+            
+        }
+    }
+    
+    
+    private var userInformationTextFieldsSectionView: some View {
+        VStack(spacing: 30) {
+            CVCreatorTextFieldView(viewModel: viewModel.userNameTextFieldViewModel)
+            CVCreatorTextFieldView(viewModel: viewModel.passwordTextFieldViewModel)
+        }
+        .padding(.vertical)
+    }
+    
+    private var mainButtonsSectionView: some View {
+        VStack {
+            Button {
+//                if viewModel.userNameTextFieldViewModel. .username == viewModel.password {
+//                    viewModel.goToMain()
+//                }
+                
+            } label: {
+                Text("Login")
+                    .frame(maxWidth: .infinity)
+                    .padding(.vertical)
+                    .foregroundColor(.white)
+                    .background(.black)
+            }
+            NavigationLink {
+                SignUpView()
+            } label: {
+                Text("Sign up")
+            }
+            .foregroundColor(.black)
+        }
     }
 }
 
@@ -71,3 +117,6 @@ struct LoginView_Previews: PreviewProvider {
                 rootViewModel: RootViewModel()))
     }
 }
+
+
+

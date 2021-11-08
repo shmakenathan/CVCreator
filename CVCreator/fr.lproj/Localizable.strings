@@ -1,0 +1,11 @@
+/* 
+  Localizable.strings
+  CVCreator
+
+  Created by Nathan on 04/11/2021.
+  
+*/
+
+"login_navigation_title" = "Bienvenue !";
+"login_username_placeholder" = "Nom d'utilisateur";
+"login_password_placeholder" = "Mot de passe";

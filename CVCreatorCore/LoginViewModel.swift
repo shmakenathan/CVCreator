@@ -10,6 +10,20 @@ import Foundation
 
 public class LoginViewModel: ObservableObject {
     
+    public let navigationTitle = StringKeys.loginNavigationTitle
+    
+    public let userNameTextFieldViewModel = CVCreatorTextFieldViewModel(
+        isSecured: false,
+        placeholder: StringKeys.loginUsernamePlaceholder
+    )
+    
+    public let passwordTextFieldViewModel = CVCreatorTextFieldViewModel(
+        isSecured: true,
+        placeholder: StringKeys.loginPasswordPlaceholder
+    )
+
+    
+    
     public init(rootViewModel: RootViewModel) {
         self.rootViewModel = rootViewModel
     }

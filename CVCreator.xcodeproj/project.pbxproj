@@ -29,6 +29,12 @@
 		D8358F1E2721B4DF0048D178 /* OnboardingSlideViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8358F1D2721B4DF0048D178 /* OnboardingSlideViewModel.swift */; };
 		D8D0D7A3272A991A00B338CF /* OnboardingSlideView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8D0D7A2272A991900B338CF /* OnboardingSlideView.swift */; };
 		D8F3CB48273364F8000051EA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D8F3CB47273364F8000051EA /* Assets.xcassets */; };
+		D8F3CB4B2733E707000051EA /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D8F3CB4D2733E707000051EA /* Localizable.strings */; };
+		D8F3CB542733E8B5000051EA /* StringKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8F3CB502733E79C000051EA /* StringKeys.swift */; };
+		D8F3CB552733E8C1000051EA /* String+Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8F3CB522733E827000051EA /* String+Localizable.swift */; };
+		D8F3CB582733ECB2000051EA /* CVCreatorTextFieldViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8F3CB572733ECB2000051EA /* CVCreatorTextFieldViewModel.swift */; };
+		D8F3CB5B2733EE9F000051EA /* CVCreatorTextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8F3CB5A2733EE9F000051EA /* CVCreatorTextFieldView.swift */; };
+		D8F3CB5D2733F0A6000051EA /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8F3CB5C2733F0A6000051EA /* SignUpView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -108,6 +114,13 @@
 		D8358F1D2721B4DF0048D178 /* OnboardingSlideViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingSlideViewModel.swift; sourceTree = "<group>"; };
 		D8D0D7A2272A991900B338CF /* OnboardingSlideView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingSlideView.swift; sourceTree = "<group>"; };
 		D8F3CB47273364F8000051EA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D8F3CB4C2733E707000051EA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		D8F3CB4E2733E70A000051EA /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
+		D8F3CB502733E79C000051EA /* StringKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringKeys.swift; sourceTree = "<group>"; };
+		D8F3CB522733E827000051EA /* String+Localizable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Localizable.swift"; sourceTree = "<group>"; };
+		D8F3CB572733ECB2000051EA /* CVCreatorTextFieldViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CVCreatorTextFieldViewModel.swift; sourceTree = "<group>"; };
+		D8F3CB5A2733EE9F000051EA /* CVCreatorTextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CVCreatorTextFieldView.swift; sourceTree = "<group>"; };
+		D8F3CB5C2733F0A6000051EA /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -178,14 +191,17 @@
 		D8358EBF2721ABBB0048D178 /* CVCreator */ = {
 			isa = PBXGroup;
 			children = (
+				D8F3CB592733EE7F000051EA /* Shared */,
 				D8358EC02721ABBB0048D178 /* CVCreatorApp.swift */,
 				D8F3CB47273364F8000051EA /* Assets.xcassets */,
 				D8358EC62721ABBE0048D178 /* Preview Content */,
 				D8358EEA2721AC8C0048D178 /* RootView.swift */,
 				D8358EEC2721AC9E0048D178 /* OnboardingView.swift */,
 				D8358EEE2721ACA80048D178 /* LoginView.swift */,
+				D8F3CB5C2733F0A6000051EA /* SignUpView.swift */,
 				D8358EF02721ACB60048D178 /* MainView.swift */,
 				D8D0D7A2272A991900B338CF /* OnboardingSlideView.swift */,
+				D8F3CB4D2733E707000051EA /* Localizable.strings */,
 			);
 			path = CVCreator;
 			sourceTree = "<group>";
@@ -218,6 +234,8 @@
 		D8358EF82721ACF90048D178 /* CVCreatorCore */ = {
 			isa = PBXGroup;
 			children = (
+				D8F3CB562733EC9D000051EA /* Shared */,
+				D8F3CB4F2733E762000051EA /* Resources */,
 				D8358EF92721ACF90048D178 /* CVCreatorCore.h */,
 				D8358EFA2721ACF90048D178 /* CVCreatorCore.docc */,
 				D8358F152721AD1A0048D178 /* RootViewModel.swift */,
@@ -235,6 +253,31 @@
 				D8358F072721ACFA0048D178 /* CVCreatorCoreTests.swift */,
 			);
 			path = CVCreatorCoreTests;
+			sourceTree = "<group>";
+		};
+		D8F3CB4F2733E762000051EA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D8F3CB522733E827000051EA /* String+Localizable.swift */,
+				D8F3CB502733E79C000051EA /* StringKeys.swift */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		D8F3CB562733EC9D000051EA /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				D8F3CB572733ECB2000051EA /* CVCreatorTextFieldViewModel.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		D8F3CB592733EE7F000051EA /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				D8F3CB5A2733EE9F000051EA /* CVCreatorTextFieldView.swift */,
+			);
+			path = Shared;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -380,6 +423,7 @@
 			knownRegions = (
 				en,
 				Base,
+				fr,
 			);
 			mainGroup = D8358EB42721ABBB0048D178;
 			productRefGroup = D8358EBE2721ABBB0048D178 /* Products */;
@@ -401,6 +445,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D8F3CB48273364F8000051EA /* Assets.xcassets in Resources */,
+				D8F3CB4B2733E707000051EA /* Localizable.strings in Resources */,
 				D8358EC82721ABBE0048D178 /* Preview Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -444,8 +489,10 @@
 				D8D0D7A3272A991A00B338CF /* OnboardingSlideView.swift in Sources */,
 				D8358EED2721AC9E0048D178 /* OnboardingView.swift in Sources */,
 				D8358EC12721ABBB0048D178 /* CVCreatorApp.swift in Sources */,
+				D8F3CB5D2733F0A6000051EA /* SignUpView.swift in Sources */,
 				D8358EEF2721ACA80048D178 /* LoginView.swift in Sources */,
 				D8358EEB2721AC8C0048D178 /* RootView.swift in Sources */,
+				D8F3CB5B2733EE9F000051EA /* CVCreatorTextFieldView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -473,9 +520,12 @@
 				D8358F1C2721AD560048D178 /* MainViewModel.swift in Sources */,
 				D8358F1A2721AD390048D178 /* LoginViewModel.swift in Sources */,
 				D8358F182721AD290048D178 /* OnboardingViewModel.swift in Sources */,
+				D8F3CB582733ECB2000051EA /* CVCreatorTextFieldViewModel.swift in Sources */,
 				D8358F162721AD1A0048D178 /* RootViewModel.swift in Sources */,
+				D8F3CB542733E8B5000051EA /* StringKeys.swift in Sources */,
 				D8358F1E2721B4DF0048D178 /* OnboardingSlideViewModel.swift in Sources */,
 				D8358EFB2721ACF90048D178 /* CVCreatorCore.docc in Sources */,
+				D8F3CB552733E8C1000051EA /* String+Localizable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -516,6 +566,18 @@
 			targetProxy = D8358F0A2721ACFA0048D178 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		D8F3CB4D2733E707000051EA /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D8F3CB4C2733E707000051EA /* en */,
+				D8F3CB4E2733E70A000051EA /* fr */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		D8358EDF2721ABBF0048D178 /* Debug */ = {
