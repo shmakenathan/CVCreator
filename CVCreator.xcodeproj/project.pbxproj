@@ -35,6 +35,13 @@
 		D8F3CB582733ECB2000051EA /* CVCreatorTextFieldViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8F3CB572733ECB2000051EA /* CVCreatorTextFieldViewModel.swift */; };
 		D8F3CB5B2733EE9F000051EA /* CVCreatorTextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8F3CB5A2733EE9F000051EA /* CVCreatorTextFieldView.swift */; };
 		D8F3CB5D2733F0A6000051EA /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8F3CB5C2733F0A6000051EA /* SignUpView.swift */; };
+		D8F3CB5F27392992000051EA /* SocialNetworkButtonsGroupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8F3CB5E27392992000051EA /* SocialNetworkButtonsGroupView.swift */; };
+		D8F3CB61273929FE000051EA /* SocialNetworkButtonsGroupViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8F3CB60273929FD000051EA /* SocialNetworkButtonsGroupViewModel.swift */; };
+		D8F3CB6427392ADB000051EA /* SocialNetworkButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8F3CB6327392ADB000051EA /* SocialNetworkButtonView.swift */; };
+		D8F3CB6727392B75000051EA /* SocialNetworkButtonViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8F3CB6627392B75000051EA /* SocialNetworkButtonViewModel.swift */; };
+		D8F3CB6927392D7C000051EA /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8F3CB6827392D7C000051EA /* SignUpViewModel.swift */; };
+		D8F3CB6D27393036000051EA /* ImageName.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8F3CB6B27392FA9000051EA /* ImageName.swift */; };
+		D8F3CB6F273931DD000051EA /* SocialNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8F3CB6E273931DD000051EA /* SocialNetwork.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -121,6 +128,13 @@
 		D8F3CB572733ECB2000051EA /* CVCreatorTextFieldViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CVCreatorTextFieldViewModel.swift; sourceTree = "<group>"; };
 		D8F3CB5A2733EE9F000051EA /* CVCreatorTextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CVCreatorTextFieldView.swift; sourceTree = "<group>"; };
 		D8F3CB5C2733F0A6000051EA /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
+		D8F3CB5E27392992000051EA /* SocialNetworkButtonsGroupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialNetworkButtonsGroupView.swift; sourceTree = "<group>"; };
+		D8F3CB60273929FD000051EA /* SocialNetworkButtonsGroupViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialNetworkButtonsGroupViewModel.swift; sourceTree = "<group>"; };
+		D8F3CB6327392ADB000051EA /* SocialNetworkButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialNetworkButtonView.swift; sourceTree = "<group>"; };
+		D8F3CB6627392B75000051EA /* SocialNetworkButtonViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialNetworkButtonViewModel.swift; sourceTree = "<group>"; };
+		D8F3CB6827392D7C000051EA /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
+		D8F3CB6B27392FA9000051EA /* ImageName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageName.swift; sourceTree = "<group>"; };
+		D8F3CB6E273931DD000051EA /* SocialNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialNetwork.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -243,6 +257,7 @@
 				D8358F192721AD390048D178 /* LoginViewModel.swift */,
 				D8358F1B2721AD560048D178 /* MainViewModel.swift */,
 				D8358F1D2721B4DF0048D178 /* OnboardingSlideViewModel.swift */,
+				D8F3CB6827392D7C000051EA /* SignUpViewModel.swift */,
 			);
 			path = CVCreatorCore;
 			sourceTree = "<group>";
@@ -258,6 +273,7 @@
 		D8F3CB4F2733E762000051EA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				D8F3CB6B27392FA9000051EA /* ImageName.swift */,
 				D8F3CB522733E827000051EA /* String+Localizable.swift */,
 				D8F3CB502733E79C000051EA /* StringKeys.swift */,
 			);
@@ -268,6 +284,7 @@
 			isa = PBXGroup;
 			children = (
 				D8F3CB572733ECB2000051EA /* CVCreatorTextFieldViewModel.swift */,
+				D8F3CB6527392B60000051EA /* SocialNetwork */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -275,9 +292,29 @@
 		D8F3CB592733EE7F000051EA /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				D8F3CB6227392ACA000051EA /* SocialNetwork */,
 				D8F3CB5A2733EE9F000051EA /* CVCreatorTextFieldView.swift */,
 			);
 			path = Shared;
+			sourceTree = "<group>";
+		};
+		D8F3CB6227392ACA000051EA /* SocialNetwork */ = {
+			isa = PBXGroup;
+			children = (
+				D8F3CB5E27392992000051EA /* SocialNetworkButtonsGroupView.swift */,
+				D8F3CB6327392ADB000051EA /* SocialNetworkButtonView.swift */,
+			);
+			path = SocialNetwork;
+			sourceTree = "<group>";
+		};
+		D8F3CB6527392B60000051EA /* SocialNetwork */ = {
+			isa = PBXGroup;
+			children = (
+				D8F3CB60273929FD000051EA /* SocialNetworkButtonsGroupViewModel.swift */,
+				D8F3CB6627392B75000051EA /* SocialNetworkButtonViewModel.swift */,
+				D8F3CB6E273931DD000051EA /* SocialNetwork.swift */,
+			);
+			path = SocialNetwork;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -489,8 +526,10 @@
 				D8D0D7A3272A991A00B338CF /* OnboardingSlideView.swift in Sources */,
 				D8358EED2721AC9E0048D178 /* OnboardingView.swift in Sources */,
 				D8358EC12721ABBB0048D178 /* CVCreatorApp.swift in Sources */,
+				D8F3CB6427392ADB000051EA /* SocialNetworkButtonView.swift in Sources */,
 				D8F3CB5D2733F0A6000051EA /* SignUpView.swift in Sources */,
 				D8358EEF2721ACA80048D178 /* LoginView.swift in Sources */,
+				D8F3CB5F27392992000051EA /* SocialNetworkButtonsGroupView.swift in Sources */,
 				D8358EEB2721AC8C0048D178 /* RootView.swift in Sources */,
 				D8F3CB5B2733EE9F000051EA /* CVCreatorTextFieldView.swift in Sources */,
 			);
@@ -517,14 +556,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D8F3CB6727392B75000051EA /* SocialNetworkButtonViewModel.swift in Sources */,
 				D8358F1C2721AD560048D178 /* MainViewModel.swift in Sources */,
 				D8358F1A2721AD390048D178 /* LoginViewModel.swift in Sources */,
+				D8F3CB6F273931DD000051EA /* SocialNetwork.swift in Sources */,
 				D8358F182721AD290048D178 /* OnboardingViewModel.swift in Sources */,
+				D8F3CB6D27393036000051EA /* ImageName.swift in Sources */,
 				D8F3CB582733ECB2000051EA /* CVCreatorTextFieldViewModel.swift in Sources */,
 				D8358F162721AD1A0048D178 /* RootViewModel.swift in Sources */,
 				D8F3CB542733E8B5000051EA /* StringKeys.swift in Sources */,
+				D8F3CB61273929FE000051EA /* SocialNetworkButtonsGroupViewModel.swift in Sources */,
 				D8358F1E2721B4DF0048D178 /* OnboardingSlideViewModel.swift in Sources */,
 				D8358EFB2721ACF90048D178 /* CVCreatorCore.docc in Sources */,
+				D8F3CB6927392D7C000051EA /* SignUpViewModel.swift in Sources */,
 				D8F3CB552733E8C1000051EA /* String+Localizable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

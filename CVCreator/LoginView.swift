@@ -26,7 +26,7 @@ struct LoginView: View {
                     Text("Login with")
                         .frame(maxWidth: .infinity, alignment: .leading)
                     
-                    loginWithSocialNetworksSectionView
+                    SocialNetworkButtonsGroupView(viewModel: viewModel.socialNetworkButtonsGroupViewModel)
                     
                     Text("or")
                         .frame(maxWidth: .infinity, alignment: .leading)
@@ -48,33 +48,6 @@ struct LoginView: View {
     }
     
     
-    
-    private var loginWithSocialNetworksSectionView: some View {
-        HStack(spacing: 30.0) {
-            Button {
-                
-            } label: {
-                Image("facebook")
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
-            }
-            Button {
-                
-            } label: {
-                Image("google")
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
-            }
-            Button {
-                
-            } label: {
-                Image("twitter")
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
-            }
-            
-        }
-    }
     
     
     private var userInformationTextFieldsSectionView: some View {
@@ -117,6 +90,5 @@ struct LoginView_Previews: PreviewProvider {
                 rootViewModel: RootViewModel()))
     }
 }
-
 
 

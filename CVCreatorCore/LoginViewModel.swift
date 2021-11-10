@@ -21,6 +21,8 @@ public class LoginViewModel: ObservableObject {
         isSecured: true,
         placeholder: StringKeys.loginPasswordPlaceholder
     )
+    
+    public let socialNetworkButtonsGroupViewModel = SocialNetworkButtonsGroupViewModel(optionType: .login)
 
     
     
