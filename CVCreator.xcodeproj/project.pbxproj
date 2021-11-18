@@ -27,6 +27,9 @@
 		D8358F1A2721AD390048D178 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8358F192721AD390048D178 /* LoginViewModel.swift */; };
 		D8358F1C2721AD560048D178 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8358F1B2721AD560048D178 /* MainViewModel.swift */; };
 		D8358F1E2721B4DF0048D178 /* OnboardingSlideViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8358F1D2721B4DF0048D178 /* OnboardingSlideViewModel.swift */; };
+		D88B009D2745D3E600CA0BFF /* ForgotPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D88B009C2745D3E600CA0BFF /* ForgotPasswordView.swift */; };
+		D88B00A12745D58000CA0BFF /* SignUpWithMailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D88B00A02745D58000CA0BFF /* SignUpWithMailViewModel.swift */; };
+		D88B00A32745D61E00CA0BFF /* SignUpWithMailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D88B00A22745D61E00CA0BFF /* SignUpWithMailView.swift */; };
 		D8D0D7A3272A991A00B338CF /* OnboardingSlideView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8D0D7A2272A991900B338CF /* OnboardingSlideView.swift */; };
 		D8F3CB48273364F8000051EA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D8F3CB47273364F8000051EA /* Assets.xcassets */; };
 		D8F3CB4B2733E707000051EA /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D8F3CB4D2733E707000051EA /* Localizable.strings */; };
@@ -119,6 +122,9 @@
 		D8358F192721AD390048D178 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		D8358F1B2721AD560048D178 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		D8358F1D2721B4DF0048D178 /* OnboardingSlideViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingSlideViewModel.swift; sourceTree = "<group>"; };
+		D88B009C2745D3E600CA0BFF /* ForgotPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordView.swift; sourceTree = "<group>"; };
+		D88B00A02745D58000CA0BFF /* SignUpWithMailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpWithMailViewModel.swift; sourceTree = "<group>"; };
+		D88B00A22745D61E00CA0BFF /* SignUpWithMailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpWithMailView.swift; sourceTree = "<group>"; };
 		D8D0D7A2272A991900B338CF /* OnboardingSlideView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingSlideView.swift; sourceTree = "<group>"; };
 		D8F3CB47273364F8000051EA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D8F3CB4C2733E707000051EA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -213,6 +219,8 @@
 				D8358EEC2721AC9E0048D178 /* OnboardingView.swift */,
 				D8358EEE2721ACA80048D178 /* LoginView.swift */,
 				D8F3CB5C2733F0A6000051EA /* SignUpView.swift */,
+				D88B009C2745D3E600CA0BFF /* ForgotPasswordView.swift */,
+				D88B00A22745D61E00CA0BFF /* SignUpWithMailView.swift */,
 				D8358EF02721ACB60048D178 /* MainView.swift */,
 				D8D0D7A2272A991900B338CF /* OnboardingSlideView.swift */,
 				D8F3CB4D2733E707000051EA /* Localizable.strings */,
@@ -255,6 +263,7 @@
 				D8358F152721AD1A0048D178 /* RootViewModel.swift */,
 				D8358F172721AD290048D178 /* OnboardingViewModel.swift */,
 				D8358F192721AD390048D178 /* LoginViewModel.swift */,
+				D88B00A02745D58000CA0BFF /* SignUpWithMailViewModel.swift */,
 				D8358F1B2721AD560048D178 /* MainViewModel.swift */,
 				D8358F1D2721B4DF0048D178 /* OnboardingSlideViewModel.swift */,
 				D8F3CB6827392D7C000051EA /* SignUpViewModel.swift */,
@@ -528,6 +537,8 @@
 				D8358EC12721ABBB0048D178 /* CVCreatorApp.swift in Sources */,
 				D8F3CB6427392ADB000051EA /* SocialNetworkButtonView.swift in Sources */,
 				D8F3CB5D2733F0A6000051EA /* SignUpView.swift in Sources */,
+				D88B009D2745D3E600CA0BFF /* ForgotPasswordView.swift in Sources */,
+				D88B00A32745D61E00CA0BFF /* SignUpWithMailView.swift in Sources */,
 				D8358EEF2721ACA80048D178 /* LoginView.swift in Sources */,
 				D8F3CB5F27392992000051EA /* SocialNetworkButtonsGroupView.swift in Sources */,
 				D8358EEB2721AC8C0048D178 /* RootView.swift in Sources */,
@@ -568,6 +579,7 @@
 				D8F3CB61273929FE000051EA /* SocialNetworkButtonsGroupViewModel.swift in Sources */,
 				D8358F1E2721B4DF0048D178 /* OnboardingSlideViewModel.swift in Sources */,
 				D8358EFB2721ACF90048D178 /* CVCreatorCore.docc in Sources */,
+				D88B00A12745D58000CA0BFF /* SignUpWithMailViewModel.swift in Sources */,
 				D8F3CB6927392D7C000051EA /* SignUpViewModel.swift in Sources */,
 				D8F3CB552733E8C1000051EA /* String+Localizable.swift in Sources */,
 			);

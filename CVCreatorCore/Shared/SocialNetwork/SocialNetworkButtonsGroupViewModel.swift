@@ -46,6 +46,10 @@ public class SocialNetworkButtonsGroupViewModel: ObservableObject {
             logInWithTwitter()
         case (.twitter, .signUp):
             signUpWithTwitter()
+        case (.apple, .login):
+            logInWithApple()
+        case (.apple, .signUp):
+            signUpWithApple()
         }
     }
     
@@ -58,8 +62,12 @@ public class SocialNetworkButtonsGroupViewModel: ObservableObject {
         
     }
     
-    
-    
+    private func logInWithApple() {
+        
+    }
+    private func signUpWithApple() {
+        
+    }
     
     private func logInWithFacebook() {
         

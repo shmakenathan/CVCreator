@@ -39,7 +39,7 @@ struct LoginView: View {
                 mainButtonsSectionView
                 
             }
-            .padding(.horizontal, 20)
+            .padding(.horizontal, 15)
             .padding(.vertical)
             .navigationBarHidden(true)
         }

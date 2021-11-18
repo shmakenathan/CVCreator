@@ -15,11 +15,17 @@ struct SignUpView: View {
         NavigationView {
             
             VStack {
+                Text("CVCreator")
+                    .font(.title)
+                    .fontWeight(.bold)
+             
+                Text("Get Started With") .frame(maxWidth: .infinity, alignment: .leading).padding(.vertical,10)
                 SocialNetworkButtonsGroupView(viewModel: viewModel.socialNetworkButtonsGroupViewModel)
+                Text("Get Started With") .frame(maxWidth: .infinity, alignment: .leading).padding(.vertical,10)
                 mainButtonsSectionView
                 //CVCreatorTextFieldView(viewModel: viewModel.userNameTextFieldViewModel)
             }
-            .padding(.horizontal, 20)
+            .padding(.horizontal, 15)
             .padding(.vertical)
             .navigationBarHidden(true)
         }
@@ -38,16 +44,17 @@ struct SignUpView: View {
                     .foregroundColor(.white)
                     .background(.black)
             }
-            Spacer()
+            
             NavigationLink {
                 SignUpView()
             } label: {
-                Text("Login")
-            }
-            .foregroundColor(.black)
+                Text("Already onboard ?")
+                Text("Login").foregroundColor(.red)
+            }.foregroundColor(.black).frame(maxWidth: .infinity, alignment: .leading)
+                .padding(.vertical,10.0)
         }
     }
-
+    
     
     
     
@@ -62,4 +69,4 @@ struct SignUpView_Previews: PreviewProvider {
         SignUpView()
     }
 }
- 
+
