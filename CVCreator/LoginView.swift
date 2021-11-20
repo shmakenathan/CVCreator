@@ -16,9 +16,6 @@ struct LoginView: View {
     var body: some View {
         NavigationView {
             VStack {
-                Text(viewModel.navigationTitle)
-                    .font(.largeTitle)
-                    .fontWeight(.bold)
                 
                 Spacer()
                 
@@ -41,7 +38,7 @@ struct LoginView: View {
             }
             .padding(.horizontal, 15)
             .padding(.vertical)
-            .navigationBarHidden(true)
+            .navigationTitle(viewModel.navigationTitle)
         }
         
         
@@ -87,7 +84,10 @@ struct LoginView_Previews: PreviewProvider {
     static var previews: some View {
         LoginView(
             viewModel: LoginViewModel(
-                rootViewModel: RootViewModel()))
+                rootViewModel: RootViewModel()
+            )
+        )
+        .customNavigationBarPreviewModifier()
     }
 }
 

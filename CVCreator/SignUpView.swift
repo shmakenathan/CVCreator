@@ -12,23 +12,27 @@ struct SignUpView: View {
     @StateObject var viewModel = SignUpViewModel()
     
     var body: some View {
-        NavigationView {
+        
+        VStack {
             
-            VStack {
-                Text("CVCreator")
-                    .font(.title)
-                    .fontWeight(.bold)
-             
-                Text("Get Started With") .frame(maxWidth: .infinity, alignment: .leading).padding(.vertical,10)
-                SocialNetworkButtonsGroupView(viewModel: viewModel.socialNetworkButtonsGroupViewModel)
-                Text("Get Started With") .frame(maxWidth: .infinity, alignment: .leading).padding(.vertical,10)
-                mainButtonsSectionView
-                //CVCreatorTextFieldView(viewModel: viewModel.userNameTextFieldViewModel)
-            }
-            .padding(.horizontal, 15)
-            .padding(.vertical)
-            .navigationBarHidden(true)
+            Spacer()
+            
+            Text("Get Started With") .frame(maxWidth: .infinity, alignment: .leading).padding(.vertical,10)
+            SocialNetworkButtonsGroupView(viewModel: viewModel.socialNetworkButtonsGroupViewModel)
+            Text("Get Started With")
+                .frame(maxWidth: .infinity, alignment: .leading)
+                .padding(.vertical, 10)
+            mainButtonsSectionView
+            //CVCreatorTextFieldView(viewModel: viewModel.userNameTextFieldViewModel)
+            Spacer()
+            alreadySignedUpButtonView
         }
+        .padding(.horizontal, 15)
+        .padding(.vertical)
+        .navigationBarTitleDisplayMode(.inline)
+        .navigationTitle("Sign Up")
+
+        
     }
     
     
@@ -45,14 +49,19 @@ struct SignUpView: View {
                     .background(.black)
             }
             
-            NavigationLink {
-                SignUpView()
-            } label: {
-                Text("Already onboard ?")
-                Text("Login").foregroundColor(.red)
-            }.foregroundColor(.black).frame(maxWidth: .infinity, alignment: .leading)
-                .padding(.vertical,10.0)
+        
         }
+    }
+    
+    private var alreadySignedUpButtonView: some View {
+        NavigationLink {
+            SignUpView()
+        } label: {
+            Text("Already onboard ?")
+            Text("Login").foregroundColor(.red)
+        }.foregroundColor(.black)
+            .frame(maxWidth: .infinity, alignment: .leading)
+            .padding(.vertical,10.0)
     }
     
     
@@ -65,8 +74,14 @@ struct SignUpView: View {
 
 
 struct SignUpView_Previews: PreviewProvider {
+    
     static var previews: some View {
-        SignUpView()
+        NavigationView {
+            SignUpView()
+        }
+        .customNavigationBarPreviewModifier()
+        
     }
 }
+
 

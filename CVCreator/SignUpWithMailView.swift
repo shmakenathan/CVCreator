@@ -35,12 +35,11 @@ struct SignUpWithMailView: View {
     
     
     private var userInformationTextFieldsSectionView: some View {
-        VStack(spacing: 30) {
-            CVCreatorTextFieldView(viewModel: viewModel.userNameTextFieldViewModel)
-            CVCreatorTextFieldView(viewModel: viewModel.emailTextFieldViewModel)
-            CVCreatorTextFieldView(viewModel: viewModel.passwordTextFieldViewModel)
-            CVCreatorTextFieldView(viewModel: viewModel.passwordConfimTextFieldViewModel)
+        List(viewModel.textFieldsViewModels) {
+            CVCreatorTextFieldView(viewModel: $0)
+                .listRowSeparator(.hidden)
         }
+        .listStyle(.plain)
         .padding(.vertical)
     }
 }
@@ -48,5 +47,6 @@ struct SignUpWithMailView_Previews: PreviewProvider {
     static var previews: some View {
         SignUpWithMailView(viewModel: SignUpWithMailViewModel(
             rootViewModel: RootViewModel()))
+            .previewDevice(PreviewDevice(rawValue: "iPhone 7"))
     }
 }

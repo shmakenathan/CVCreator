@@ -9,10 +9,11 @@ import SwiftUI
 
 struct ForgotPasswordView: View {
     var body: some View {
+        
         NavigationView {
             
             VStack {
-                Text("Hello")
+                Text("Mot de passe oublié ?")
                     .font(.title)
                     .fontWeight(.bold)
                 Spacer()

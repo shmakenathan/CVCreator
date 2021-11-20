@@ -10,20 +10,28 @@ public class SignUpWithMailViewModel: ObservableObject {
     
     public let navigationTitle = StringKeys.loginNavigationTitle
     
-    public let userNameTextFieldViewModel = CVCreatorTextFieldViewModel(
+    public lazy var textFieldsViewModels: [CVCreatorTextFieldViewModel] = [
+        userNameTextFieldViewModel,
+        emailTextFieldViewModel,
+        passwordTextFieldViewModel,
+        passwordConfimTextFieldViewModel
+    ]
+    
+    
+    private let userNameTextFieldViewModel = CVCreatorTextFieldViewModel(
         isSecured: false,
         placeholder: StringKeys.loginUsernamePlaceholder
     )
-    public let emailTextFieldViewModel = CVCreatorTextFieldViewModel(
+    private let emailTextFieldViewModel = CVCreatorTextFieldViewModel(
         isSecured: false,
         placeholder: StringKeys.loginPasswordPlaceholder
     )
-    public let passwordTextFieldViewModel = CVCreatorTextFieldViewModel(
+    private let passwordTextFieldViewModel = CVCreatorTextFieldViewModel(
         isSecured: true,
         placeholder: StringKeys.loginPasswordPlaceholder
     )
     
-    public let passwordConfimTextFieldViewModel = CVCreatorTextFieldViewModel(
+    private let passwordConfimTextFieldViewModel = CVCreatorTextFieldViewModel(
         isSecured: true,
         placeholder: StringKeys.loginPasswordPlaceholder
     )

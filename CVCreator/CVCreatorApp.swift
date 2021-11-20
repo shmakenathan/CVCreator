@@ -9,6 +9,11 @@ import SwiftUI
 
 @main
 struct CVCreatorApp: App {
+
+    init() {
+        NavigationBarCustomizer.shared.setupCustomNavigationBar()
+    }
+   
     var body: some Scene {
         WindowGroup {
             RootView()
