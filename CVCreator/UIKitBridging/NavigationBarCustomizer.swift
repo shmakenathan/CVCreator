@@ -16,23 +16,24 @@ final class NavigationBarCustomizer {
         let appearance = UINavigationBarAppearance()
         
         appearance.configureWithOpaqueBackground()
-        appearance.backgroundColor = .systemRed
+        appearance.backgroundColor = .white
+        appearance.shadowColor = .clear
+        appearance.shadowImage = nil
         
         appearance.titleTextAttributes = [
-            .foregroundColor : UIColor.white
+            .foregroundColor : UIColor.black
         ]
         
         appearance.largeTitleTextAttributes = [
-            .foregroundColor : UIColor.systemCyan,
-            .font : UIFont.systemFont(ofSize: 20)
-            //.font : UIFont(name: "", size: 20)
+            .foregroundColor : UIColor.black
+            //.font : UIFont.systemFont(ofSize: 20)
         ]
         
         UINavigationBar.appearance().standardAppearance = appearance
         UINavigationBar.appearance().compactAppearance = appearance
         UINavigationBar.appearance().scrollEdgeAppearance = appearance
         
-        UINavigationBar.appearance().tintColor = .white
+        UINavigationBar.appearance().tintColor = .systemBlue
         
     }
 }

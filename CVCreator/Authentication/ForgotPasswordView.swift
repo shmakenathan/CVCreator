@@ -6,8 +6,12 @@
 //
 
 import SwiftUI
+import CVCreatorCore
 
 struct ForgotPasswordView: View {
+    
+    @StateObject var viewModel: ForgotPasswordViewModel
+    
     var body: some View {
         
         NavigationView {
@@ -17,8 +21,15 @@ struct ForgotPasswordView: View {
                     .font(.title)
                     .fontWeight(.bold)
                 Spacer()
-               
-              //  CVCreatorTextFieldView(viewModel: <#CVCreatorTextFieldViewModel#>)
+                
+                CVCreatorTextFieldView(viewModel: viewModel.emailTextFieldViewModel)
+                Spacer()
+                Button {
+                    
+                } label: {
+                    Text("Password").foregroundColor(.white)
+                    
+                }.padding().frame(maxWidth: .infinity).background(.black)
             }
             .padding(.horizontal, 15)
             .padding(.vertical)
@@ -29,6 +40,8 @@ struct ForgotPasswordView: View {
 
 struct ForgotPasswordView_Previews: PreviewProvider {
     static var previews: some View {
-        ForgotPasswordView()
+        ForgotPasswordView(viewModel: ForgotPasswordViewModel(
+            rootViewModel: RootViewModel()
+        ))
     }
 }

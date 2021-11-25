@@ -58,10 +58,7 @@ struct LoginView: View {
     private var mainButtonsSectionView: some View {
         VStack {
             Button {
-//                if viewModel.userNameTextFieldViewModel. .username == viewModel.password {
-//                    viewModel.goToMain()
-//                }
-                
+                viewModel.login()
             } label: {
                 Text("Login")
                     .frame(maxWidth: .infinity)

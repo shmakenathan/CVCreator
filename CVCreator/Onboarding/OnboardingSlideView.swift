@@ -40,6 +40,7 @@ struct OnboardingSlideView: View {
             }
             .padding(.horizontal, 10)
             .navigationTitle(viewModel.title)
+            .navigationBarTitleDisplayMode(.inline)
         }
         
     }
