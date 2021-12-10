@@ -39,6 +39,11 @@ struct LoginView: View {
             .padding(.horizontal, 15)
             .padding(.vertical)
             .navigationTitle(viewModel.navigationTitle)
+            .alert(
+                viewModel.alertTitle,
+                isPresented: $viewModel.isAlertPresented) {
+                    
+                }
         }
         
         

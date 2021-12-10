@@ -7,8 +7,11 @@
 
 import Foundation
 
-
+@MainActor
 public class LoginViewModel: ObservableObject {
+    
+    @Published public var isAlertPresented = false
+    public var alertTitle = ""
     
     public let navigationTitle = StringKeys.loginNavigationTitle
     
@@ -51,15 +54,20 @@ public class LoginViewModel: ObservableObject {
     public func login() {
         let username = userNameTextFieldViewModel.inputText
         let password = passwordTextFieldViewModel.inputText
+        print("pass")
+        print(password)
         
         Task {
+            print("pass2")
+            print(password)
             do {
                 if try await authenticationService.login(username: username, password: password) {
                     goToMain()
                 }
             } catch {
                 guard let error = error as? AuthenticationService.Error else { return }
-                print("\(error) error ❌❌")
+                alertTitle = error.alertTitle
+                isAlertPresented.toggle()
             }
         }
     }

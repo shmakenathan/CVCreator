@@ -134,6 +134,7 @@
 		D88B00A427464BAD00CA0BFF /* ForgotPasswordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewModel.swift; sourceTree = "<group>"; };
 		D88B00A7274654B800CA0BFF /* NavigationBarCustomizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarCustomizer.swift; sourceTree = "<group>"; };
 		D88B00A927465A1300CA0BFF /* CustomNavigationBarPreviewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationBarPreviewModifier.swift; sourceTree = "<group>"; };
+		D896928A275A21F400AAF87B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		D8D0D7A2272A991900B338CF /* OnboardingSlideView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingSlideView.swift; sourceTree = "<group>"; };
 		D8ECF507274F921400DB5C37 /* AuthenticationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationService.swift; sourceTree = "<group>"; };
 		D8ECF50C274F9FF500DB5C37 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
@@ -223,6 +224,7 @@
 		D8358EBF2721ABBB0048D178 /* CVCreator */ = {
 			isa = PBXGroup;
 			children = (
+				D896928A275A21F400AAF87B /* Info.plist */,
 				D88B00A62746549000CA0BFF /* UIKitBridging */,
 				D8F3CB592733EE7F000051EA /* Shared */,
 				D8358EC02721ABBB0048D178 /* CVCreatorApp.swift */,
@@ -844,6 +846,7 @@
 				DEVELOPMENT_TEAM = LV6V24R5F5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = CVCreator/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -875,6 +878,7 @@
 				DEVELOPMENT_TEAM = LV6V24R5F5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = CVCreator/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
