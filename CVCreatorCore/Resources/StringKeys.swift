@@ -9,8 +9,10 @@ import Foundation
 
 
 struct StringKeys {
-    static let loginNavigationTitle = "login_navigation_title".localized
-    static let loginUsernamePlaceholder = "login_username_placeholder".localized
-    static let loginPasswordPlaceholder = "login_password_placeholder".localized
+    static let loginNavigationTitle = "loginNavigationTitle".localized
+    static let loginUsernamePlaceholder = "loginUsernamePlaceholder".localized
+    static let loginPasswordPlaceholder = "loginPasswordPlaceholder".localized
+    static let loginConfirmationPasswordPlaceholder = "loginConfirmationPasswordPlaceholder".localized
+    static let loginEmailPlaceholder = "loginEmailPlaceholder".localized
     
 }

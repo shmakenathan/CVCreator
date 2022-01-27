@@ -8,8 +8,12 @@
 import SwiftUI
 import CVCreatorCore
 
+
+
 struct SignUpView: View {
-    @StateObject var viewModel = SignUpViewModel()
+    
+    @Environment(\.dismiss) var dismiss
+    @StateObject var viewModel: SignUpViewModel = SignUpViewModel()
     
     var body: some View {
         
@@ -17,16 +21,26 @@ struct SignUpView: View {
             
             Spacer()
             
+            userInformationTextFieldsSectionView
             Text("Get Started With") .frame(maxWidth: .infinity, alignment: .leading).padding(.vertical,10)
-            SocialNetworkButtonsGroupView(viewModel: viewModel.socialNetworkButtonsGroupViewModel)
-            Text("Get Started With")
-                .frame(maxWidth: .infinity, alignment: .leading)
-                .padding(.vertical, 10)
+            //SocialNetworkButtonsGroupView(viewModel: viewModel.socialNetworkButtonsGroupViewModel)
+         
             mainButtonsSectionView
             //CVCreatorTextFieldView(viewModel: viewModel.userNameTextFieldViewModel)
             Spacer()
             alreadySignedUpButtonView
         }
+        .alert(isPresented: $viewModel.isAlertPresented) {
+            Alert(title: "Error", message: viewModel.alertErrorType?.alertTitle)
+            
+        }
+        
+        /*
+         viewModel.alertErrorType?.alertTitle ?? "",
+         isPresented: $viewModel.isAlertPresented,
+         presenting: viewModel.alertErrorType,
+         actions: { _ in
+         }*/
         .padding(.horizontal, 15)
         .padding(.vertical)
         .navigationBarTitleDisplayMode(.inline)
@@ -36,13 +50,22 @@ struct SignUpView: View {
     }
     
     
+    private var userInformationTextFieldsSectionView: some View {
+        
+        VStack(spacing: 30) {
+            ForEach(viewModel.textFieldsViewModels) {
+                CVCreatorTextFieldView(viewModel: $0)
+            }
+        }
+        .padding(.vertical)
+    }
     
     private var mainButtonsSectionView: some View {
         VStack {
             Button {
-                
+                viewModel.submit()
             } label: {
-                Text("Email")
+                Text("Submit")
                     .frame(maxWidth: .infinity)
                     .padding(.vertical)
                     .foregroundColor(.white)
@@ -54,14 +77,18 @@ struct SignUpView: View {
     }
     
     private var alreadySignedUpButtonView: some View {
-        NavigationLink {
-            SignUpView()
+        Button {
+            dismiss()
         } label: {
-            Text("Already onboard ?")
-            Text("Login").foregroundColor(.red)
-        }.foregroundColor(.black)
+            VStack {
+                Text("Already onboard ?")
+                Text("Login").foregroundColor(.red)
+            }
+            .foregroundColor(.black)
             .frame(maxWidth: .infinity, alignment: .leading)
             .padding(.vertical,10.0)
+        }
+        
     }
     
     
@@ -77,7 +104,7 @@ struct SignUpView_Previews: PreviewProvider {
     
     static var previews: some View {
         NavigationView {
-            SignUpView()
+            SignUpView(viewModel: SignUpViewModel())
         }
         .customNavigationBarPreviewModifier()
         

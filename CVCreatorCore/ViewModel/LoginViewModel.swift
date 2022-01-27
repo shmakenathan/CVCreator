@@ -16,13 +16,11 @@ public class LoginViewModel: ObservableObject {
     public let navigationTitle = StringKeys.loginNavigationTitle
     
     public let userNameTextFieldViewModel = CVCreatorTextFieldViewModel(
-        isSecured: false,
-        placeholder: StringKeys.loginUsernamePlaceholder
+        textFieldType: .username
     )
     
     public let passwordTextFieldViewModel = CVCreatorTextFieldViewModel(
-        isSecured: true,
-        placeholder: StringKeys.loginPasswordPlaceholder
+        textFieldType: .password
     )
     
     public let socialNetworkButtonsGroupViewModel = SocialNetworkButtonsGroupViewModel(optionType: .login)

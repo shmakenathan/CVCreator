@@ -11,8 +11,7 @@ public class ForgotPasswordViewModel: ObservableObject {
     public let navigationTitle = StringKeys.loginNavigationTitle
     
     public let emailTextFieldViewModel = CVCreatorTextFieldViewModel(
-        isSecured: false,
-        placeholder: StringKeys.loginUsernamePlaceholder
+        textFieldType: .email
     )
     
     public init(rootViewModel: RootViewModel) {

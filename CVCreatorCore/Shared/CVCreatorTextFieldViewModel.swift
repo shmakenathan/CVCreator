@@ -7,17 +7,25 @@
 
 import Foundation
 
-
-
 public class CVCreatorTextFieldViewModel: ObservableObject, Identifiable {
-    init(isSecured: Bool, placeholder: String) {
-        self.isSecured = isSecured
-        self.placeholder = placeholder
+    
+    init(
+        textFieldType: TextFieldType
+    ) {
+        self.textFieldType = textFieldType
     }
     
     public let id = UUID()
-    public let isSecured: Bool
     
-    public let placeholder: String
+    public var isSecured: Bool {
+        textFieldType.isSecured
+    }
+    
+    public let textFieldType: TextFieldType
+    
+    public var placeholder: String {
+        textFieldType.placeholder
+    }
+    
     @Published public var inputText: String = ""
 }

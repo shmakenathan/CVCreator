@@ -21,10 +21,12 @@ struct CVCreatorTextFieldView: View {
                     TextField(viewModel.placeholder, text: $viewModel.inputText)
                 }
             }
+            .keyboardType(viewModel.textFieldType.associatedKeyboardType)
             .textFieldStyle(PlainTextFieldStyle())
             .frame(height: 50)
             Divider()
         }
     }
 }
+
 
