@@ -18,7 +18,8 @@ public class CVCreatorTextFieldViewModel: ObservableObject, Identifiable {
     public let id = UUID()
     
     public var isSecured: Bool {
-        textFieldType.isSecured
+        return false
+        //textFieldType.isSecured
     }
     
     public let textFieldType: TextFieldType
@@ -28,4 +29,5 @@ public class CVCreatorTextFieldViewModel: ObservableObject, Identifiable {
     }
     
     @Published public var inputText: String = ""
+    @Published public var hasError = false
 }

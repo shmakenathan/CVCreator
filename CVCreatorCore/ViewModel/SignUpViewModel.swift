@@ -1,6 +1,7 @@
 import Foundation
 
 
+@MainActor
 public class SignUpViewModel: ObservableObject {
     
     public let navigationTitle = StringKeys.loginNavigationTitle
@@ -44,8 +45,36 @@ public class SignUpViewModel: ObservableObject {
         //rootViewModel.presentedRootViewType = .main
     }
     
-    @Published public var alertErrorType: AlertErrorType?
+    @Published public var alertErrorType: AlertErrorType? {
+        didSet {
+            textFieldsViewModels.forEach {
+                $0.hasError = false
+            }
+            
+            guard let alertErrorType = alertErrorType else {
+                return
+            }
+            
+            switch alertErrorType {
+            case .usernameIsEmpty:
+                userNameTextFieldViewModel.hasError = true
+            case .emailIsEmpty:
+                emailTextFieldViewModel.hasError = true
+            case .passwordNotIdentical:
+                passwordTextFieldViewModel.hasError = true
+                passwordConfimTextFieldViewModel.hasError = true
+            case .emailNotConform:
+                emailTextFieldViewModel.hasError = true
+            case .passwordIsEmpty:
+                passwordTextFieldViewModel.hasError = true
+            case .failedToSignUp:
+                break
+            }
+        }
+    }
     @Published public var isAlertPresented = false
+    
+    @Published public var isLoading = false
     
     public func submit() {
         let username = userNameTextFieldViewModel.inputText
@@ -88,6 +117,28 @@ public class SignUpViewModel: ObservableObject {
             isAlertPresented = true
             return
         }
+        
+        isLoading.toggle()
+        
+        Task {
+            
+            do {
+                let isSignedUp = try await authenticationService.signUp(username: username, email: email, password: password1)
+                if isSignedUp {
+                    print("SHOULD GO TO MAIN APP SECTION")
+                } else {
+                    alertErrorType = .failedToSignUp
+                    isAlertPresented = true
+                }
+            } catch {
+                alertErrorType = .failedToSignUp
+                isAlertPresented = true
+            }
+            
+            
+            isLoading.toggle()
+        }
+        
 
         
         //for textFieldsViewModel in textFieldsViewModels {
@@ -96,12 +147,18 @@ public class SignUpViewModel: ObservableObject {
     }
     
     
+    
+    private let authenticationService = AuthenticationService.shared
+    
+    
+    
     public enum AlertErrorType {
         case usernameIsEmpty
         case emailIsEmpty
         case passwordNotIdentical
         case emailNotConform
         case passwordIsEmpty
+        case failedToSignUp
         // other cases here
         
         public var alertTitle: String {
@@ -116,6 +173,8 @@ public class SignUpViewModel: ObservableObject {
                 return "Email not conform"
             case .passwordIsEmpty:
                 return "Password is empty"
+            case .failedToSignUp:
+                return "Failed to signup"
                 
             }
         }

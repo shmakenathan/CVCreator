@@ -24,7 +24,9 @@ struct CVCreatorTextFieldView: View {
             .keyboardType(viewModel.textFieldType.associatedKeyboardType)
             .textFieldStyle(PlainTextFieldStyle())
             .frame(height: 50)
-            Divider()
+            Rectangle()
+                .fill(viewModel.hasError ? .red : .gray)
+                .frame(height: 1)
         }
     }
 }

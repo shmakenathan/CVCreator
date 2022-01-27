@@ -30,17 +30,21 @@ struct SignUpView: View {
             Spacer()
             alreadySignedUpButtonView
         }
-        .alert(isPresented: $viewModel.isAlertPresented) {
-            Alert(title: "Error", message: viewModel.alertErrorType?.alertTitle)
+        //.alert(isPresented: $viewModel.isAlertPresented) {
+            //Alert(title: Text("Erreur"),
+            //      message: Text(viewModel.alertErrorType!.alertTitle),
+            //      dismissButton:
+            //        Alert.Button.cancel()
+            //        )
+            //)
             
+            
+        .alert(
+            viewModel.alertErrorType?.alertTitle ?? "",
+            isPresented: $viewModel.isAlertPresented,
+            presenting: viewModel.alertErrorType) { alertErrorType in
         }
         
-        /*
-         viewModel.alertErrorType?.alertTitle ?? "",
-         isPresented: $viewModel.isAlertPresented,
-         presenting: viewModel.alertErrorType,
-         actions: { _ in
-         }*/
         .padding(.horizontal, 15)
         .padding(.vertical)
         .navigationBarTitleDisplayMode(.inline)
@@ -65,11 +69,15 @@ struct SignUpView: View {
             Button {
                 viewModel.submit()
             } label: {
-                Text("Submit")
-                    .frame(maxWidth: .infinity)
-                    .padding(.vertical)
-                    .foregroundColor(.white)
-                    .background(.black)
+                if viewModel.isLoading {
+                    ProgressView()
+                } else {
+                    Text("Submit")
+                        .frame(maxWidth: .infinity)
+                        .padding(.vertical)
+                        .foregroundColor(.white)
+                        .background(.black)
+                }
             }
             
         

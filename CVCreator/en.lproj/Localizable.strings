@@ -6,6 +6,9 @@
   
 */
 
-"login_navigation_title" = "Welcome!";
-"login_username_placeholder" = "Username";
-"login_password_placeholder" = "Password";
+
+"loginNavigationTitle" = "Welcome!";
+"loginUsernamePlaceholder" = "Username";
+"loginPasswordPlaceholder" = "Password";
+"loginConfirmationPasswordPlaceholder" = "Password Confirmation";
+"loginEmailPlaceholder" = "Email";
